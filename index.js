@@ -3,7 +3,7 @@ const app = express();
 const mysql = require("mysql");
 const cors = require("cors");
 const axios = require('axios');
-
+const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
@@ -62,6 +62,6 @@ app.get("/employees", (req, res) => {
 });
 */
 
-app.listen(3001, () => {
-  console.log("Yey, your server is running on port 3001");
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
 });
